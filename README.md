@@ -1,5 +1,13 @@
 # Cambridge-MT Multitracks Downloader
 
+## Why this exists
+
+The multitrack library at cambridge-mt.com is an invaluable, freely shared educational resource. It is also one that could disappear at any time — websites go down, maintainers move on, hosting lapses. These scripts exist to create a local backup of that library for preservation and personal use.
+
+It is worth noting that building these scripts was far harder than it needed to be. The site sits behind Cloudflare challenges, serves data through obfuscated JavaScript, and offers no API or structured feed. In an era where AI makes sophisticated automation accessible to anyone, these barriers do not meaningfully prevent downloading — they merely make it tedious. A simple, well-documented download mechanism (an RSS feed, a public API, even a plain file listing) would have made this entire repository unnecessary. Publishers of freely available resources have everything to gain and nothing to lose by making their content easy to access programmatically.
+
+---
+
 Scripts for downloading the free multitracks library from [cambridge-mt.com](https://multitracksearch.cambridge-mt.com/ms-mtk-search-ads.htm) into a local collection.
 
 ## Requirements
