@@ -4,7 +4,7 @@
 https://multitracksearch.cambridge-mt.com/ms-mtk-search-ads.htm
 
 ## Destination
-`/Volumes/home/music/multitracks/The Mixing Secrets`
+Passed as a required command-line argument. The directory must exist before running.
 
 ## Scripts
 
