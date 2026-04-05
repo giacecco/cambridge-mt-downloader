@@ -6,7 +6,16 @@ import { join, extname, basename } from "path";
 import { $ } from "bun";
 import { chromium, type Browser, type BrowserContext } from "playwright";
 
-const BASE_DIR = "/Volumes/home/music/multitracks/The Mixing Secrets";
+const destDir = process.argv[2];
+if (!destDir) {
+  console.error("Usage: bun cambridge-mt-download-playwright.ts <destination-directory>");
+  process.exit(1);
+}
+if (!existsSync(destDir)) {
+  console.error(`Error: destination directory does not exist: ${destDir}`);
+  process.exit(1);
+}
+const BASE_DIR = destDir;
 const CACHE_FILE = "/tmp/cambridge-mt-tracks-cache.json";
 const CACHE_TTL_MS = 24 * 60 * 60 * 1000; // 24 hours
 

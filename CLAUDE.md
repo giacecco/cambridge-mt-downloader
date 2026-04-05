@@ -31,8 +31,10 @@ brew install sox
 ## Running
 
 ```bash
-bun cambridge-mt-download-playwright.ts   # download new tracks + add missing previews
+bun cambridge-mt-download-playwright.ts /path/to/destination
 ```
+
+The destination directory must exist and be writable. The script will create `Artist - Track` subdirectories within it.
 
 ## Key Technical Notes
 

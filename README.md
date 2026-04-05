@@ -21,8 +21,10 @@ Scripts for downloading the free multitracks library from [cambridge-mt.com](htt
 Download all new tracks and add missing previews:
 
 ```bash
-bun cambridge-mt-download-playwright.ts
+bun cambridge-mt-download-playwright.ts /path/to/destination
 ```
+
+The destination directory must exist. Track folders will be created within it.
 
 ## What it does
 
