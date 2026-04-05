@@ -16,11 +16,10 @@ Main download script. For each track that has a stems zip:
 - Downloads the preview (`rough mix.mp3` for Full tracks, `excerpt.mp3` for Excerpt tracks — excerpt only if no rough mix exists for that folder)
 - Caches the track list for 24h at `/tmp/cambridge-mt-tracks-cache.json`
 
-### `cambridge-mt-fill-previews.ts`
-Adds missing previews to folders that already exist locally. Covers ALL tracks (including those without zip downloads, which the main script skips). Sorts: rough mixes first, then excerpts. Skips excerpt if a `rough mix.*` file already exists in the folder.
+## Legacy Scripts
 
-### `flatten_multitracks.ts`
-One-time migration utility: flattens a two-level `Artist/Track` folder structure into flat `Artist - Track` folders at the root of The Mixing Secrets directory.
+- `legacy/cambridge-mt-fill-previews.ts` — one-time utility to add missing previews (main script now handles this)
+- `legacy/flatten_multitracks.ts` — one-time migration to flatten `Artist/Track` structure
 
 ## Prerequisites
 
@@ -33,7 +32,6 @@ brew install sox
 
 ```bash
 bun cambridge-mt-download-playwright.ts   # download new tracks + add missing previews
-bun cambridge-mt-fill-previews.ts         # fill previews only (faster, no zip downloads)
 ```
 
 ## Key Technical Notes

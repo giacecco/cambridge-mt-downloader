@@ -16,12 +16,6 @@ Download all new tracks and add missing previews:
 bun cambridge-mt-download-playwright.ts
 ```
 
-Add missing previews to already-downloaded folders (faster — no zip downloads):
-
-```bash
-bun cambridge-mt-fill-previews.ts
-```
-
 ## What it does
 
 - Scrapes ~1400 tracks from the cambridge-mt search page (bypasses Cloudflare using a non-headless Chromium)
